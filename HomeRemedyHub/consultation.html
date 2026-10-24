@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Consultation | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="css/consultation.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a
+                href="doctor.html"
+                class="active">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    MEDICAL CONSULTATION
+                </p>
+
+
+                <h1>
+                    Doctor Consultation
+                </h1>
+
+
+                <p>
+                    Connect with your selected doctor and prepare your consultation.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE ONLY -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             SELECTED DOCTOR
+        ====================================================== -->
+
+        <section class="doctor-panel">
+
+
+            <div class="doctor-photo">
+
+
+                <img
+                    id="selectedDoctorImage"
+                    src=""
+                    alt="Selected Doctor">
+
+
+                <div
+                    id="doctorImageFallback"
+                    class="doctor-image-fallback">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="doctor-information">
+
+
+                <span class="selected-label">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    SELECTED FOR CONSULTATION
+
+                </span>
+
+
+                <h2 id="consultationDoctor">
+                    Doctor not selected
+                </h2>
+
+
+                <p
+                    id="consultationSpecialization"
+                    class="doctor-specialization">
+
+                    Select a doctor to continue
+
+                </p>
+
+
+
+                <div class="doctor-meta">
+
+
+                    <span>
+
+                        <i class="fa-solid fa-hospital"></i>
+
+                        <span id="consultationHospital">
+                            Hospital not selected
+                        </span>
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Hyderabad
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONSULTATION ACTIONS
+            ================================================== -->
+
+            <div class="doctor-actions">
+
+
+                <button
+                    type="button"
+                    id="startVideoCall"
+                    class="video-call-btn">
+
+
+                    <i class="fa-solid fa-video"></i>
+
+                    Video Call
+
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    id="startAudioCall"
+                    class="audio-call-btn">
+
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Audio Call
+
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    id="bookAppointmentButton"
+                    class="appointment-btn">
+
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Book Appointment
+
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="change-doctor-btn"
+                    onclick="window.location.href='doctor.html'">
+
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Change Doctor
+
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONSULTATION FORM
+        ====================================================== -->
+
+        <section class="consultation-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        HEALTH CONCERN
+                    </span>
+
+
+                    <h2>
+                        Tell the Doctor About Your Problem
+                    </h2>
+
+
+                    <p>
+                        Provide the important information the doctor may need.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="section-heading-icon">
+
+                    <i class="fa-solid fa-notes-medical"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <form id="consultationForm">
+
+
+                <!-- =================================================
+                     PATIENT
+                ================================================== -->
+
+                <div class="form-section-title">
+
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Patient Information
+
+
+                </div>
+
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+
+                        <label for="patientName">
+                            Patient Name
+                        </label>
+
+
+                        <div class="input-box readonly-box">
+
+
+                            <i class="fa-solid fa-user"></i>
+
+
+                            <input
+                                type="text"
+                                id="patientName"
+                                placeholder="Patient name"
+                                readonly>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+
+                        <label for="patientEmail">
+                            Registered Email
+                        </label>
+
+
+                        <div class="input-box readonly-box">
+
+
+                            <i class="fa-solid fa-envelope"></i>
+
+
+                            <input
+                                type="email"
+                                id="patientEmail"
+                                placeholder="Email address"
+                                readonly>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     HEALTH CONCERN
+                ================================================== -->
+
+                <div class="form-section-title">
+
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    Health Information
+
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+
+                    <label for="healthConcern">
+                        Main Health Concern
+                    </label>
+
+
+                    <div class="input-box">
+
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+
+                        <input
+                            type="text"
+                            id="healthConcern"
+                            placeholder="Example: Fever and headache for 2 days"
+                            required>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+
+                    <label for="concernDetails">
+                        Describe Your Symptoms
+                    </label>
+
+
+                    <div class="textarea-box">
+
+
+                        <textarea
+                            id="concernDetails"
+                            rows="5"
+                            placeholder="Describe your symptoms, when they started and any other important information..."
+                            required></textarea>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="form-grid consultation-selects">
+
+
+                    <!-- DURATION -->
+
+                    <div class="form-group">
+
+
+                        <label for="symptomDuration">
+                            Symptom Duration
+                        </label>
+
+
+                        <div class="select-box">
+
+
+                            <i class="fa-regular fa-clock"></i>
+
+
+                            <select
+                                id="symptomDuration"
+                                required>
+
+
+                                <option value="">
+                                    Select duration
+                                </option>
+
+
+                                <option value="Today">
+                                    Today
+                                </option>
+
+
+                                <option value="1-2 Days">
+                                    1–2 Days
+                                </option>
+
+
+                                <option value="3-7 Days">
+                                    3–7 Days
+                                </option>
+
+
+                                <option value="More than a Week">
+                                    More than a Week
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- SEVERITY -->
+
+                    <div class="form-group">
+
+
+                        <label for="concernSeverity">
+                            Current Severity
+                        </label>
+
+
+                        <div class="select-box">
+
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+
+                            <select
+                                id="concernSeverity"
+                                required>
+
+
+                                <option value="">
+                                    Select severity
+                                </option>
+
+
+                                <option value="Mild">
+                                    Mild
+                                </option>
+
+
+                                <option value="Moderate">
+                                    Moderate
+                                </option>
+
+
+                                <option value="Severe">
+                                    Severe
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     MEDICATION
+                ================================================== -->
+
+                <div class="form-group full-width">
+
+
+                    <label for="currentMedication">
+                        Current Medication
+                    </label>
+
+
+                    <div class="input-box">
+
+
+                        <i class="fa-solid fa-pills"></i>
+
+
+                        <input
+                            type="text"
+                            id="currentMedication"
+                            placeholder="Enter medicines you currently take, if any">
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     MESSAGE
+                ================================================== -->
+
+                <div
+                    id="consultationMessage"
+                    class="consultation-message hidden">
+                </div>
+
+
+
+                <!-- =================================================
+                     FORM BUTTONS
+                ================================================== -->
+
+                <div class="form-actions">
+
+
+                    <button
+                        type="button"
+                        id="clearConsultationForm"
+                        class="clear-btn">
+
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Clear
+
+
+                    </button>
+
+
+
+                    <button
+                        type="submit"
+                        class="prepare-btn">
+
+
+                        <i class="fa-solid fa-clipboard-check"></i>
+
+                        Prepare Consultation Summary
+
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONSULTATION SUMMARY
+        ====================================================== -->
+
+        <section
+            id="consultationSummary"
+            class="consultation-summary">
+
+
+            <div class="summary-header">
+
+
+                <div>
+
+
+                    <span>
+                        CONSULTATION SUMMARY
+                    </span>
+
+
+                    <h2>
+                        Information Ready for Doctor
+                    </h2>
+
+
+                </div>
+
+
+
+                <div class="summary-ready">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Ready
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="summary-grid">
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Doctor
+                    </span>
+
+                    <strong id="summaryDoctor">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Hospital
+                    </span>
+
+                    <strong id="summaryHospital">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Main Concern
+                    </span>
+
+                    <strong id="summaryConcern">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Severity
+                    </span>
+
+                    <strong id="summarySeverity">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Duration
+                    </span>
+
+                    <strong id="summaryDuration">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Medication
+                    </span>
+
+                    <strong id="summaryMedication">
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="summary-description">
+
+
+                <span>
+                    Symptoms / Details
+                </span>
+
+
+                <p id="summaryDescription">
+                    —
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUMMARY ACTIONS
+            ================================================== -->
+
+            <div class="summary-actions">
+
+
+                <button
+                    type="button"
+                    id="summaryVideoCall"
+                    class="summary-video-btn">
+
+
+                    <i class="fa-solid fa-video"></i>
+
+                    Start Video Call
+
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    id="summaryBookAppointment"
+                    class="summary-book-btn">
+
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Book Appointment
+
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     CALL WINDOW
+========================================================= -->
+
+<div
+    id="callModal"
+    class="call-modal"
+    aria-hidden="true">
+
+
+    <div class="call-window">
+
+
+        <!-- =================================================
+             CALL HEADER
+        ================================================== -->
+
+        <div class="call-header">
+
+
+            <div>
+
+
+                <span id="callTypeLabel">
+                    VIDEO CONSULTATION
+                </span>
+
+
+                <h2 id="callDoctorName">
+                    Doctor
+                </h2>
+
+
+            </div>
+
+
+
+            <button
+                type="button"
+                id="closeCallButton"
+                class="close-call-button"
+                title="Close call window">
+
+
+                <i class="fa-solid fa-xmark"></i>
+
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             VIDEO AREA
+        ================================================== -->
+
+        <div class="video-stage">
+
+
+            <!-- =============================================
+                 REMOTE DOCTOR AREA
+            ============================================== -->
+
+            <div class="remote-video-panel">
+
+
+                <!-- For future WebRTC remote stream -->
+
+                <video
+                    id="remoteVideo"
+                    autoplay
+                    playsinline>
+                </video>
+
+
+
+                <div
+                    id="remotePlaceholder"
+                    class="remote-placeholder">
+
+
+                    <div class="call-doctor-avatar">
+
+
+                        <img
+                            id="callDoctorImage"
+                            src=""
+                            alt="Doctor">
+
+
+                        <span
+                            id="callDoctorFallback"
+                            class="call-doctor-fallback">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <h3 id="remoteDoctorName">
+                        Doctor
+                    </h3>
+
+
+                    <p id="callStatus">
+                        Preparing consultation...
+                    </p>
+
+
+                    <div class="waiting-indicator">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 LOCAL PATIENT VIDEO
+            ============================================== -->
+
+            <div
+                id="localVideoPanel"
+                class="local-video-panel">
+
+
+                <video
+                    id="localVideo"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+
+
+                <div
+                    id="cameraOffPlaceholder"
+                    class="camera-off-placeholder">
+
+
+                    <i class="fa-solid fa-video-slash"></i>
+
+                    <span>
+                        Camera Off
+                    </span>
+
+
+                </div>
+
+
+
+                <span class="you-label">
+                    You
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CALL STATUS NOTE
+        ================================================== -->
+
+        <div
+            id="callPermissionMessage"
+            class="call-permission-message">
+
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Allow camera and microphone access when your browser asks.
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CALL CONTROLS
+        ================================================== -->
+
+        <div class="call-controls">
+
+
+            <button
+                type="button"
+                id="toggleMicrophone"
+                class="call-control"
+                title="Mute microphone">
+
+
+                <i class="fa-solid fa-microphone"></i>
+
+                <span>
+                    Mic
+                </span>
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="toggleCamera"
+                class="call-control"
+                title="Turn camera off">
+
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>
+                    Camera
+                </span>
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="endCall"
+                class="call-control end-call"
+                title="End call">
+
+
+                <i class="fa-solid fa-phone-slash"></i>
+
+                <span>
+                    End
+
+                </span>
+
+
+            </button>
+
+
+        </div>
+
+
+
+        <p class="call-development-note">
+
+            Camera and microphone controls are active.
+            Connecting a second doctor device requires the WebRTC
+            signaling backend.
+
+        </p>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="js/consultation.js"></script>
+
+
+</body>
+
+</html>

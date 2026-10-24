@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Nearby Hospitals | HomeRemedyHub
+    </title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/hospital.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a
+                href="hospital.html"
+                class="active">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    HEALTHCARE NETWORK
+                </p>
+
+
+                <h1>
+                    Nearby Hospitals
+                </h1>
+
+
+                <p>
+                    Find hospitals and healthcare specialists near you.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             SEARCH + FILTER
+        ====================================================== -->
+
+        <section class="hospital-tools">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="hospitalSearch"
+                    placeholder="Search hospital, location or specialty...">
+
+
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-section">
+
+
+                <button
+                    type="button"
+                    class="filter active">
+
+                    All
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter">
+
+                    Cardiology
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter">
+
+                    Neurology
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter">
+
+                    Orthopedic
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter">
+
+                    Emergency
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECTION HEADING
+        ====================================================== -->
+
+        <div class="section-heading">
+
+
+            <div>
+
+
+                <span>
+                    HEALTHCARE PROVIDERS
+                </span>
+
+
+                <h2>
+                    Recommended Hospitals
+                </h2>
+
+
+            </div>
+
+
+            <p id="hospitalCount">
+                3 hospitals available
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             HOSPITAL GRID
+        ====================================================== -->
+
+        <section class="hospital-grid">
+
+
+            <!-- =================================================
+                 APOLLO
+            ================================================== -->
+
+            <article class="hospital-card">
+
+
+                <div class="hospital-image">
+
+
+                    <img
+                        src="images/apollo.jpg"
+                        alt="Apollo Hospitals">
+
+
+                    <span class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        4.9
+
+                    </span>
+
+
+                    <span class="open-badge">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Open 24×7
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="hospital-details">
+
+
+                    <div class="hospital-title-row">
+
+
+                        <div>
+
+
+                            <span class="hospital-type">
+                                MULTISPECIALITY
+                            </span>
+
+
+                            <h2>
+                                Apollo Hospitals
+                            </h2>
+
+
+                        </div>
+
+
+                        <div class="hospital-icon">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Jubilee Hills, Hyderabad
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 40 2360 7777
+
+                    </p>
+
+
+
+                    <div class="specialists">
+
+
+                        <span>
+                            Cardiology
+                        </span>
+
+
+                        <span>
+                            Neurology
+                        </span>
+
+
+                        <span>
+                            Orthopedic
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="facility-row">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            <strong>
+                                550
+                            </strong>
+
+                            <span>
+                                Beds
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-truck-medical"></i>
+
+                            <strong>
+                                24×7
+                            </strong>
+
+                            <span>
+                                Emergency
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-square-parking"></i>
+
+                            <strong>
+                                Yes
+                            </strong>
+
+                            <span>
+                                Parking
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="card-actions">
+
+
+                        <button
+                            type="button"
+                            class="map-btn">
+
+                            <i class="fa-solid fa-location-arrow"></i>
+
+                            View Map
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+                            onclick="bookAppointment(
+                                'Apollo Hospitals',
+                                'General Physician'
+                            )">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Book Appointment
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 YASHODA
+            ================================================== -->
+
+            <article class="hospital-card">
+
+
+                <div class="hospital-image">
+
+
+                    <img
+                        src="images/yashoda.jpg"
+                        alt="Yashoda Hospitals">
+
+
+                    <span class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        4.8
+
+                    </span>
+
+
+                    <span class="open-badge">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Open 24×7
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="hospital-details">
+
+
+                    <div class="hospital-title-row">
+
+
+                        <div>
+
+
+                            <span class="hospital-type">
+                                MULTISPECIALITY
+                            </span>
+
+
+                            <h2>
+                                Yashoda Hospitals
+                            </h2>
+
+
+                        </div>
+
+
+                        <div class="hospital-icon">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Somajiguda, Hyderabad
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 40 4567 4567
+
+                    </p>
+
+
+
+                    <div class="specialists">
+
+
+                        <span>
+                            Cardiology
+                        </span>
+
+
+                        <span>
+                            Pulmonology
+                        </span>
+
+
+                        <span>
+                            Nephrology
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="facility-row">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            <strong>
+                                600
+                            </strong>
+
+                            <span>
+                                Beds
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-truck-medical"></i>
+
+                            <strong>
+                                24×7
+                            </strong>
+
+                            <span>
+                                Emergency
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-square-parking"></i>
+
+                            <strong>
+                                Yes
+                            </strong>
+
+                            <span>
+                                Parking
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="card-actions">
+
+
+                        <button
+                            type="button"
+                            class="map-btn">
+
+                            <i class="fa-solid fa-location-arrow"></i>
+
+                            View Map
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+                            onclick="bookAppointment(
+                                'Yashoda Hospitals',
+                                'Cardiologist'
+                            )">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Book Appointment
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 CARE
+            ================================================== -->
+
+            <article class="hospital-card">
+
+
+                <div class="hospital-image">
+
+
+                    <img
+                        src="images/care.jpg"
+                        alt="CARE Hospitals">
+
+
+                    <span class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        4.7
+
+                    </span>
+
+
+                    <span class="open-badge">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Open 24×7
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="hospital-details">
+
+
+                    <div class="hospital-title-row">
+
+
+                        <div>
+
+
+                            <span class="hospital-type">
+                                MULTISPECIALITY
+                            </span>
+
+
+                            <h2>
+                                CARE Hospitals
+                            </h2>
+
+
+                        </div>
+
+
+                        <div class="hospital-icon">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <p class="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Banjara Hills, Hyderabad
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 40 6165 6565
+
+                    </p>
+
+
+
+                    <div class="specialists">
+
+
+                        <span>
+                            Neurology
+                        </span>
+
+
+                        <span>
+                            Cardiology
+                        </span>
+
+
+                        <span>
+                            Critical Care
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="facility-row">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-bed"></i>
+
+                            <strong>
+                                500
+                            </strong>
+
+                            <span>
+                                Beds
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-truck-medical"></i>
+
+                            <strong>
+                                24×7
+                            </strong>
+
+                            <span>
+                                Emergency
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-square-parking"></i>
+
+                            <strong>
+                                Yes
+                            </strong>
+
+                            <span>
+                                Parking
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="card-actions">
+
+
+                        <button
+                            type="button"
+                            class="map-btn">
+
+                            <i class="fa-solid fa-location-arrow"></i>
+
+                            View Map
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+                            onclick="bookAppointment(
+                                'CARE Hospitals',
+                                'Neurologist'
+                            )">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Book Appointment
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NO RESULTS
+        ====================================================== -->
+
+        <div
+            id="noHospitals"
+            class="no-results">
+
+
+            <i class="fa-solid fa-hospital"></i>
+
+
+            <h3>
+                No hospitals found
+            </h3>
+
+
+            <p>
+                Try changing your search or specialty filter.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/hospital.js"></script>
+
+
+</body>
+
+</html>

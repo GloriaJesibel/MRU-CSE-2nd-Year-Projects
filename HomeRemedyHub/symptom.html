@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Symptom Checker | HomeRemedyHub</title>
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Symptom CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/symptom.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="symptom.html"
+                class="active">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+
+                    HEALTH ASSESSMENT
+
+                </p>
+
+
+                <h1>
+
+                    Symptom Checker
+
+                </h1>
+
+
+                <p>
+
+                    Describe how you feel and receive an
+                    initial health assessment.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE ONLY -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             SYMPTOM CHECKER
+        ================================================== -->
+
+        <section class="checker-layout">
+
+
+            <!-- =================================================
+                 MAIN CHECKER CARD
+            ================================================== -->
+
+            <div class="checker-card">
+
+
+                <!-- HEADER -->
+
+                <div class="section-heading">
+
+
+                    <div>
+
+
+                        <span>
+
+                            YOUR SYMPTOMS
+
+                        </span>
+
+
+                        <h2>
+
+                            How are you feeling?
+
+                        </h2>
+
+
+                        <p>
+
+                            Select your symptoms and provide
+                            a few additional details.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="section-icon">
+
+                        <i class="fa-solid fa-notes-medical"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     COMMON SYMPTOMS
+                ================================================== -->
+
+                <div class="symptom-section">
+
+
+                    <div class="field-heading">
+
+
+                        <h3>
+
+                            Select Symptoms
+
+                        </h3>
+
+
+                        <p>
+
+                            Choose one or more symptoms
+                            you currently have.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="symptom-grid">
+
+
+                        <!-- FEVER -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Fever">
+
+                            <i class="fa-solid fa-temperature-high"></i>
+
+                            <span>
+                                Fever
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- HEADACHE -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Headache">
+
+                            <i class="fa-solid fa-head-side-virus"></i>
+
+                            <span>
+                                Headache
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- COUGH -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Cough">
+
+                            <i class="fa-solid fa-lungs"></i>
+
+                            <span>
+                                Cough
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- COLD -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Cold">
+
+                            <i class="fa-solid fa-snowflake"></i>
+
+                            <span>
+                                Cold
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- SORE THROAT -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Sore Throat">
+
+                            <i class="fa-solid fa-head-side-cough"></i>
+
+                            <span>
+                                Sore Throat
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- VOMITING -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Vomiting">
+
+                            <i class="fa-solid fa-face-dizzy"></i>
+
+                            <span>
+                                Vomiting
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- STOMACH PAIN -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Stomach Pain">
+
+                            <i class="fa-solid fa-person"></i>
+
+                            <span>
+                                Stomach Pain
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- BODY PAIN -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Body Pain">
+
+                            <i class="fa-solid fa-person-rays"></i>
+
+                            <span>
+                                Body Pain
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- FATIGUE -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Fatigue">
+
+                            <i class="fa-solid fa-battery-quarter"></i>
+
+                            <span>
+                                Fatigue
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- DIZZINESS -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Dizziness">
+
+                            <i class="fa-solid fa-person-falling"></i>
+
+                            <span>
+                                Dizziness
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- BREATHING -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Breathing Difficulty">
+
+                            <i class="fa-solid fa-lungs-virus"></i>
+
+                            <span>
+                                Breathing Difficulty
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- CHEST PAIN -->
+
+                        <button
+                            type="button"
+                            class="symptom-option"
+                            data-symptom="Chest Pain">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                            <span>
+                                Chest Pain
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SELECTED SYMPTOMS
+                ================================================== -->
+
+                <div class="selected-section">
+
+
+                    <div class="selected-heading">
+
+
+                        <span>
+
+                            Selected Symptoms
+
+                        </span>
+
+
+                        <strong id="selectedCount">
+
+                            0
+
+                        </strong>
+
+
+                    </div>
+
+
+
+                    <div
+                        id="selectedSymptoms"
+                        class="selected-symptoms">
+
+
+                        <p class="no-selection">
+
+                            No symptoms selected yet.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ADDITIONAL INFORMATION
+                ================================================== -->
+
+                <div class="symptom-section">
+
+
+                    <div class="field-heading">
+
+
+                        <h3>
+
+                            Additional Information
+
+                        </h3>
+
+
+                        <p>
+
+                            Add any other symptoms or useful
+                            information if needed.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="textarea-box">
+
+
+                        <textarea
+                            id="additionalSymptoms"
+                            rows="4"
+                            placeholder="Example: Symptoms started 2 days ago, mild body pain, loss of appetite..."></textarea>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DURATION
+                ================================================== -->
+
+                <div class="symptom-section">
+
+
+                    <div class="field-heading">
+
+
+                        <h3>
+
+                            How long have you had these symptoms?
+
+                        </h3>
+
+
+                    </div>
+
+
+
+                    <div class="duration-options">
+
+
+                        <button
+                            type="button"
+                            class="duration-btn"
+                            data-duration="Today">
+
+                            Today
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="duration-btn"
+                            data-duration="1-2 Days">
+
+                            1–2 Days
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="duration-btn"
+                            data-duration="3-7 Days">
+
+                            3–7 Days
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="duration-btn"
+                            data-duration="More than a Week">
+
+                            More than a Week
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ANALYZE
+                ================================================== -->
+
+                <button
+                    type="button"
+                    id="analyzeButton"
+                    class="analyze-btn">
+
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Analyze Symptoms
+
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE INFORMATION
+            ================================================== -->
+
+            <aside class="checker-side">
+
+
+                <!-- HOW IT WORKS -->
+
+                <div class="side-card">
+
+
+                    <div class="side-title">
+
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+
+                        <h3>
+
+                            How it works
+
+                        </h3>
+
+
+                    </div>
+
+
+
+                    <div class="step-item">
+
+
+                        <span>
+                            1
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Select symptoms
+                            </strong>
+
+                            <p>
+                                Choose the symptoms you are experiencing.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="step-item">
+
+
+                        <span>
+                            2
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Add details
+                            </strong>
+
+                            <p>
+                                Provide additional information and duration.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="step-item">
+
+
+                        <span>
+                            3
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                View assessment
+                            </strong>
+
+                            <p>
+                                Review the assessment score and risk level.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DISCLAIMER -->
+
+                <div class="warning-card">
+
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+
+                    <div>
+
+
+                        <h4>
+
+                            Important
+
+                        </h4>
+
+
+                        <p>
+
+                            This symptom checker provides preliminary
+                            guidance only and does not replace professional
+                            medical diagnosis.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ANALYSIS RESULT
+        ====================================================== -->
+
+        <section
+            id="analysisResult"
+            class="analysis-result">
+
+
+            <!-- HEADER -->
+
+            <div class="result-header">
+
+
+                <div>
+
+
+                    <span>
+
+                        HEALTH ASSESSMENT
+
+                    </span>
+
+
+                    <h2>
+
+                        Symptom Analysis Result
+
+                    </h2>
+
+
+                </div>
+
+
+
+                <div
+                    id="resultSeverityBadge"
+                    class="severity-badge">
+
+                    Assessment
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT BODY
+            ================================================== -->
+
+            <div class="result-layout">
+
+
+                <!-- LEFT RESULT INFORMATION -->
+
+                <div class="result-information">
+
+
+                    <!-- CONDITION -->
+
+                    <div class="result-card">
+
+
+                        <div class="result-icon condition-icon">
+
+                            <i class="fa-solid fa-stethoscope"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <span>
+
+                                Possible Condition
+
+                            </span>
+
+
+                            <strong id="resultCondition">
+
+                                -
+
+                            </strong>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- SEVERITY -->
+
+                    <div class="result-card">
+
+
+                        <div class="result-icon severity-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <span>
+
+                                Risk Level
+
+                            </span>
+
+
+                            <strong id="resultSeverity">
+
+                                -
+
+                            </strong>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CIRCULAR RISK PERCENTAGE
+                ================================================== -->
+
+                <div class="risk-panel">
+
+
+                    <span class="risk-heading">
+
+                        ASSESSMENT SCORE
+
+                    </span>
+
+
+                    <div
+                        id="riskCircle"
+                        class="risk-circle">
+
+
+                        <div class="risk-circle-inner">
+
+
+                            <strong id="resultPercentage">
+
+                                0%
+
+                            </strong>
+
+
+                            <span>
+
+                                Score
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <strong
+                        id="riskLabel"
+                        class="risk-label">
+
+                        Not assessed
+
+                    </strong>
+
+
+                    <p>
+
+                        The colour represents the assessed
+                        risk level.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RECOMMENDATION
+            ================================================== -->
+
+            <div class="recommendation-box">
+
+
+                <div class="recommendation-icon">
+
+                    <i class="fa-solid fa-notes-medical"></i>
+
+                </div>
+
+
+                <div>
+
+
+                    <span>
+
+                        RECOMMENDATION
+
+                    </span>
+
+
+                    <p id="resultRecommendation">
+
+                        Your recommendation will appear here
+                        after symptom analysis.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SMALL DISCLAIMER -->
+
+            <div class="result-disclaimer">
+
+
+                <i class="fa-solid fa-circle-info"></i>
+
+
+                <span>
+
+                    This score is produced by the prototype
+                    rule-based symptom checker and is not a
+                    medical diagnosis or clinical probability.
+
+                </span>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+
+            <span>
+
+                © 2026 HomeRemedyHub
+
+            </span>
+
+
+            <span>
+
+                Your Digital Healthcare Companion ❤️
+
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/symptom.js"></script>
+
+
+</body>
+
+</html>

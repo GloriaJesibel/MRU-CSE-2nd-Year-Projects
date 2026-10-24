@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- Profile CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/profile.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FINAL SIDEBAR
+        ================================================== -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <div class="support-card">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+
+                <h4>
+                    Personal Health Profile
+                </h4>
+
+
+                <p>
+
+                    Keep your personal and health information
+                    accurate for a better HomeRemedyHub experience.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    ACCOUNT & HEALTH DETAILS
+                </p>
+
+
+                <h1>
+                    My Profile
+                </h1>
+
+
+                <p>
+                    View and manage your personal healthcare information.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="topbar-actions">
+
+
+                <!-- BACK TO DASHBOARD -->
+
+                <a
+                    href="dashboard.html"
+                    class="dashboard-shortcut"
+                    title="Dashboard">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </a>
+
+
+
+                <!-- PROFILE LOGO -->
+
+                <a
+                    href="profile.html"
+                    class="profile-top"
+                    title="My Profile">
+
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="Profile"
+
+                        onerror="
+                            this.style.display='none';
+                            this.nextElementSibling.style.display='flex';
+                        ">
+
+
+                    <span class="profile-fallback">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+
+                </a>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             PROFILE HERO
+        ================================================== -->
+
+        <section class="profile-hero">
+
+
+            <div class="profile-identity">
+
+
+                <!-- AVATAR -->
+
+                <div class="profile-avatar-large">
+
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="User Profile"
+
+                        onerror="
+                            this.style.display='none';
+                            this.nextElementSibling.style.display='flex';
+                        ">
+
+
+                    <span class="large-avatar-fallback">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </span>
+
+
+                    <div class="online-indicator"></div>
+
+
+                </div>
+
+
+
+                <!-- NAME -->
+
+                <div class="profile-identity-info">
+
+
+                    <span class="profile-tag">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        REGISTERED PATIENT
+
+                    </span>
+
+
+                    <h2 id="profileFullName">
+
+                        Loading...
+
+                    </h2>
+
+
+                    <p id="profileHeroEmail">
+
+                        Loading account information...
+
+                    </p>
+
+
+                    <div class="profile-meta">
+
+
+                        <span>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span id="profileHeroLocation">
+                                Location not available
+                            </span>
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                            <span id="profileHeroBloodGroup">
+                                Blood group not available
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- EDIT BUTTON -->
+
+            <div class="profile-hero-actions">
+
+
+                <button
+                    type="button"
+                    class="edit-profile-btn"
+                    onclick="window.location.href='edit-profile.html'">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                    Edit Profile
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK HEALTH SUMMARY
+        ================================================== -->
+
+        <section class="profile-summary-grid">
+
+
+            <!-- BLOOD GROUP -->
+
+            <div class="summary-card">
+
+
+                <div class="summary-icon blood-icon">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        BLOOD GROUP
+                    </span>
+
+                    <strong id="summaryBloodGroup">
+                        —
+                    </strong>
+
+                    <small>
+                        Medical information
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GENDER -->
+
+            <div class="summary-card">
+
+
+                <div class="summary-icon gender-icon">
+
+                    <i class="fa-solid fa-person"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        GENDER
+                    </span>
+
+                    <strong
+                        id="summaryGender"
+                        class="summary-text">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        Personal information
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- HEIGHT -->
+
+            <div class="summary-card">
+
+
+                <div class="summary-icon height-icon">
+
+                    <i class="fa-solid fa-ruler-vertical"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        HEIGHT
+                    </span>
+
+                    <strong
+                        id="summaryHeight"
+                        class="summary-text">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        Health measurement
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WEIGHT -->
+
+            <div class="summary-card">
+
+
+                <div class="summary-icon weight-icon">
+
+                    <i class="fa-solid fa-weight-scale"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        WEIGHT
+                    </span>
+
+                    <strong
+                        id="summaryWeight"
+                        class="summary-text">
+
+                        —
+
+                    </strong>
+
+                    <small>
+                        Health measurement
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE DETAILS GRID
+        ================================================== -->
+
+        <section class="profile-content-grid">
+
+
+            <!-- =================================================
+                 PERSONAL INFORMATION
+            ================================================== -->
+
+            <div class="profile-card">
+
+
+                <div class="card-heading">
+
+
+                    <div>
+
+                        <span>
+                            PERSONAL DETAILS
+                        </span>
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="heading-icon">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="details-grid">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="detailFullName">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <strong id="detailEmail">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone Number
+                            </span>
+
+                            <strong id="detailPhone">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong id="detailLocation">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- GENDER -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-venus-mars"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Gender
+                            </span>
+
+                            <strong id="detailGender">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- DOB -->
+
+                    <div class="detail-item">
+
+
+                        <div class="detail-icon">
+
+                            <i class="fa-solid fa-cake-candles"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Date of Birth
+                            </span>
+
+                            <strong id="detailDateOfBirth">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HEALTH INFORMATION
+            ================================================== -->
+
+            <div class="profile-card">
+
+
+                <div class="card-heading">
+
+
+                    <div>
+
+                        <span>
+                            HEALTH PROFILE
+                        </span>
+
+                        <h2>
+                            Health Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="heading-icon health-heading-icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="health-detail-list">
+
+
+                    <!-- BLOOD GROUP -->
+
+                    <div class="health-detail">
+
+
+                        <div class="health-detail-left">
+
+
+                            <i class="fa-solid fa-droplet"></i>
+
+
+                            <div>
+
+                                <span>
+                                    Blood Group
+                                </span>
+
+                                <strong id="detailBloodGroup">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- HEIGHT -->
+
+                    <div class="health-detail">
+
+
+                        <div class="health-detail-left">
+
+
+                            <i class="fa-solid fa-ruler-vertical"></i>
+
+
+                            <div>
+
+                                <span>
+                                    Height
+                                </span>
+
+                                <strong id="detailHeight">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- WEIGHT -->
+
+                    <div class="health-detail">
+
+
+                        <div class="health-detail-left">
+
+
+                            <i class="fa-solid fa-weight-scale"></i>
+
+
+                            <div>
+
+                                <span>
+                                    Weight
+                                </span>
+
+                                <strong id="detailWeight">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ROLE -->
+
+                    <div class="health-detail">
+
+
+                        <div class="health-detail-left">
+
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+
+                            <div>
+
+                                <span>
+                                    Account Role
+                                </span>
+
+                                <strong id="detailRole">
+                                    Patient
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             HEALTH RECORD LINKS
+        ================================================== -->
+
+        <section class="records-section">
+
+
+            <div class="section-title">
+
+
+                <div>
+
+                    <span>
+                        YOUR HEALTH DATA
+                    </span>
+
+                    <h2>
+                        Health & Appointment Records
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="records-grid">
+
+
+                <!-- HEALTH HISTORY -->
+
+                <a
+                    href="healthhistory.html"
+                    class="record-card">
+
+
+                    <div class="record-icon health-record-icon">
+
+                        <i class="fa-solid fa-file-medical"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            HEALTH RECORDS
+                        </span>
+
+                        <h3>
+                            Health History
+                        </h3>
+
+                        <p>
+                            Review your previous symptom assessments.
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                </a>
+
+
+
+                <!-- APPOINTMENTS -->
+
+                <a
+                    href="appointment.html?tab=history"
+                    class="record-card">
+
+
+                    <div class="record-icon appointment-record-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            APPOINTMENT RECORDS
+                        </span>
+
+                        <h3>
+                            Appointment History
+                        </h3>
+
+                        <p>
+                            Review your previous and upcoming appointments.
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCOUNT ACTION
+        ================================================== -->
+
+        <section class="account-actions">
+
+
+            <div class="account-action-info">
+
+
+                <div class="account-icon">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        PROFILE MANAGEMENT
+                    </span>
+
+                    <h3>
+                        Need to update your information?
+                    </h3>
+
+                    <p>
+
+                        Keep your contact and health information
+                        accurate by updating your profile.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                type="button"
+                onclick="window.location.href='edit-profile.html'">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Profile
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOADING / ERROR MESSAGE
+        ================================================== -->
+
+        <div
+            id="profileMessage"
+            class="profile-message">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            Loading profile...
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- Profile JavaScript -->
+
+<script src="js/profile.js"></script>
+
+
+</body>
+
+</html>

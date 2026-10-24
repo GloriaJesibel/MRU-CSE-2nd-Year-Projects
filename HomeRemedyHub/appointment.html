@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Appointments | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- Appointment CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/appointment.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a
+                href="appointment.html"
+                class="active">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    APPOINTMENT MANAGEMENT
+                </p>
+
+
+                <h1>
+                    Appointments
+                </h1>
+
+
+                <p>
+                    Book a consultation and manage your appointment history.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE ONLY -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             TABS
+        ====================================================== -->
+
+        <section class="appointment-tabs">
+
+
+            <button
+                type="button"
+                id="bookTab"
+                class="appointment-tab active">
+
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+                Book Appointment
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="historyTab"
+                class="appointment-tab">
+
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Appointment History
+
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BOOK APPOINTMENT
+        ====================================================== -->
+
+        <section
+            id="bookingSection"
+            class="appointment-content-section active-section">
+
+
+            <div class="booking-layout">
+
+
+                <!-- =================================================
+                     FORM
+                ================================================== -->
+
+                <div class="booking-card">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+                            <span>
+                                BOOKING DETAILS
+                            </span>
+
+                            <h2>
+                                Appointment Information
+                            </h2>
+
+                            <p>
+                                Enter the required details to schedule your visit.
+                            </p>
+
+                        </div>
+
+
+                        <div class="section-heading-icon">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <form id="appointmentForm">
+
+
+                        <!-- =================================================
+                             PATIENT INFORMATION
+                        ================================================== -->
+
+                        <div class="form-section-title">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            Patient Information
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group">
+
+
+                                <label for="patientName">
+
+                                    Patient Name
+
+                                </label>
+
+
+                                <div class="input-box readonly-box">
+
+
+                                    <i class="fa-solid fa-user"></i>
+
+
+                                    <input
+                                        type="text"
+                                        id="patientName"
+                                        placeholder="Patient name"
+                                        readonly>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+
+                                <label for="email">
+
+                                    Email Address
+
+                                </label>
+
+
+                                <div class="input-box readonly-box">
+
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Email address"
+                                        readonly>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- MOBILE -->
+
+                            <div class="form-group full-width">
+
+
+                                <label for="mobile">
+
+                                    Mobile Number
+
+                                </label>
+
+
+                                <div class="input-box">
+
+
+                                    <i class="fa-solid fa-phone"></i>
+
+
+                                    <input
+                                        type="tel"
+                                        id="mobile"
+                                        maxlength="10"
+                                        inputmode="numeric"
+                                        placeholder="Enter 10-digit mobile number"
+                                        required>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             HEALTHCARE PROVIDER
+                        ================================================== -->
+
+                        <div class="form-section-title">
+
+                            <i class="fa-solid fa-hospital-user"></i>
+
+                            Healthcare Provider
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <!-- HOSPITAL -->
+
+                            <div class="form-group">
+
+
+                                <label for="hospitalName">
+
+                                    Hospital
+
+                                </label>
+
+
+                                <div class="input-box readonly-box">
+
+
+                                    <i class="fa-solid fa-hospital"></i>
+
+
+                                    <input
+                                        type="text"
+                                        id="hospitalName"
+                                        placeholder="Choose from Hospitals"
+                                        readonly>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- DOCTOR -->
+
+                            <div class="form-group">
+
+
+                                <label for="doctor">
+
+                                    Doctor / Specialist
+
+                                </label>
+
+
+                                <div class="input-box readonly-box">
+
+
+                                    <i class="fa-solid fa-user-doctor"></i>
+
+
+                                    <input
+                                        type="text"
+                                        id="doctor"
+                                        placeholder="Choose from Doctors"
+                                        readonly>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             SCHEDULE
+                        ================================================== -->
+
+                        <div class="form-section-title">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            Schedule
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <!-- DATE -->
+
+                            <div class="form-group">
+
+
+                                <label for="appointmentDate">
+
+                                    Appointment Date
+
+                                </label>
+
+
+                                <div class="input-box">
+
+
+                                    <i class="fa-solid fa-calendar-days"></i>
+
+
+                                    <input
+                                        type="date"
+                                        id="appointmentDate"
+                                        required>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- TIME -->
+
+                            <div class="form-group">
+
+
+                                <label for="appointmentTime">
+
+                                    Appointment Time
+
+                                </label>
+
+
+                                <div class="input-box">
+
+
+                                    <i class="fa-solid fa-clock"></i>
+
+
+                                    <input
+                                        type="time"
+                                        id="appointmentTime"
+                                        required>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             REASON
+                        ================================================== -->
+
+                        <div class="form-section-title">
+
+                            <i class="fa-solid fa-notes-medical"></i>
+
+                            Reason for Visit
+
+                        </div>
+
+
+
+                        <div class="form-group full-width">
+
+
+                            <label for="reason">
+
+                                Symptoms / Reason
+
+                            </label>
+
+
+                            <div class="textarea-box">
+
+
+                                <textarea
+                                    id="reason"
+                                    rows="5"
+                                    placeholder="Briefly describe your symptoms or reason for consultation..."
+                                    required></textarea>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             CONFIRM
+                        ================================================== -->
+
+                        <button
+                            type="submit"
+                            id="confirmButton"
+                            class="confirm-btn">
+
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Confirm Appointment
+
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BOOKING SUMMARY
+                ================================================== -->
+
+                <aside class="booking-summary">
+
+
+                    <div class="summary-card">
+
+
+                        <div class="summary-title">
+
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+
+                            <h3>
+                                Booking Summary
+                            </h3>
+
+
+                        </div>
+
+
+
+                        <!-- HOSPITAL -->
+
+                        <div class="summary-row">
+
+
+                            <div class="summary-icon">
+
+                                <i class="fa-solid fa-hospital"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Hospital
+                                </span>
+
+                                <strong id="summaryHospital">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- DOCTOR -->
+
+                        <div class="summary-row">
+
+
+                            <div class="summary-icon">
+
+                                <i class="fa-solid fa-user-doctor"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Doctor
+                                </span>
+
+                                <strong id="summaryDoctor">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- DATE -->
+
+                        <div class="summary-row">
+
+
+                            <div class="summary-icon">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Date
+                                </span>
+
+                                <strong id="summaryDate">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- TIME -->
+
+                        <div class="summary-row">
+
+
+                            <div class="summary-icon">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Time
+                                </span>
+
+                                <strong id="summaryTime">
+                                    Not selected
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- USEFUL NOTICE -->
+
+                    <div class="notice-card">
+
+
+                        <div class="notice-icon">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <h4>
+                                Before your appointment
+                            </h4>
+
+
+                            <p>
+
+                                Keep your previous medical reports
+                                ready if available and arrive a few
+                                minutes before the scheduled time.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             APPOINTMENT HISTORY
+        ====================================================== -->
+
+        <section
+            id="historySection"
+            class="appointment-content-section history-section">
+
+
+            <!-- =================================================
+                 HISTORY HEADER
+            ================================================== -->
+
+            <div class="history-header">
+
+
+                <div>
+
+
+                    <span class="history-label">
+
+                        YOUR APPOINTMENTS
+
+                    </span>
+
+
+                    <h2>
+                        Appointment History
+                    </h2>
+
+
+                    <p>
+                        Review your previous and upcoming appointments.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     COUNT + DELETE ALL
+                ================================================== -->
+
+                <div class="history-header-actions">
+
+
+                    <div class="history-count-box">
+
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+
+                        <div>
+
+
+                            <strong id="historyCount">
+                                0
+                            </strong>
+
+
+                            <span>
+                                Total Appointments
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        id="deleteAllAppointmentsBtn"
+                        class="delete-all-appointments-btn">
+
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete All
+
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH
+            ================================================== -->
+
+            <div class="history-tools">
+
+
+                <div class="history-search">
+
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                    <input
+                        type="text"
+                        id="historySearch"
+                        placeholder="Search doctor, hospital, date, status or reason...">
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HISTORY LIST
+            ================================================== -->
+
+            <div
+                id="appointmentHistoryList"
+                class="appointment-history-list">
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY STATE
+            ================================================== -->
+
+            <div
+                id="historyEmptyState"
+                class="history-empty-state">
+
+
+                <div class="empty-icon">
+
+                    <i class="fa-regular fa-calendar-xmark"></i>
+
+                </div>
+
+
+                <h3>
+                    No appointments found
+                </h3>
+
+
+                <p>
+                    Your booked appointments will appear here.
+                </p>
+
+
+                <button
+                    type="button"
+                    id="emptyBookButton">
+
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    Book an Appointment
+
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/appointment.js"></script>
+
+
+</body>
+
+</html>

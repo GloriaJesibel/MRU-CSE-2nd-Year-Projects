@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        HomeRemedyHub | Consultation Summary
+    </title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/summary.css">
+
+</head>
+
+
+<body>
+
+
+<div class="summary-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+
+                <h1>
+                    HomeRemedyHub
+                </h1>
+
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link">
+
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+
+        </a>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE HEADING
+    ====================================================== -->
+
+    <section class="page-heading">
+
+
+        <span class="page-label">
+            CONSULTATION RECORD
+        </span>
+
+
+        <h2>
+            Consultation Summary
+        </h2>
+
+
+        <p>
+            Review your doctor's consultation details and recommendations.
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUMMARY CONTENT
+    ====================================================== -->
+
+    <main class="summary-container">
+
+
+        <!-- =================================================
+             DOCTOR INFORMATION
+        ================================================== -->
+
+        <section class="summary-card doctor-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        DOCTOR DETAILS
+                    </span>
+
+
+                    <h3>
+                        Doctor Information
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="doctor-details">
+
+
+                <div class="doctor-image-wrapper">
+
+
+                    <img
+                        id="summaryDoctorImage"
+                        src="images/doctor-priya.jpg"
+                        alt="Doctor">
+
+
+                    <span class="availability-dot"></span>
+
+
+                </div>
+
+
+
+                <div class="doctor-info">
+
+
+                    <h4 id="summaryDoctorName">
+
+                        Dr. Priya Sharma
+
+                    </h4>
+
+
+                    <p
+                        id="summaryDoctorSpecialization"
+                        class="specialization">
+
+                        General Physician
+
+                    </p>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <span>
+
+                            <i class="fa-solid fa-briefcase-medical"></i>
+
+                            Experienced Specialist
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Verified Doctor
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PATIENT INFORMATION
+        ================================================== -->
+
+        <section class="summary-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        PATIENT DETAILS
+                    </span>
+
+
+                    <h3>
+                        Patient Information
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon patient-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="patient-grid">
+
+
+                <div class="info-box">
+
+
+                    <i class="fa-solid fa-user"></i>
+
+
+                    <div>
+
+                        <span>
+                            Name
+                        </span>
+
+                        <strong id="summaryPatientName">
+                            Patient
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="info-box">
+
+
+                    <i class="fa-solid fa-envelope"></i>
+
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong id="summaryPatientEmail">
+                            Not available
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="info-box">
+
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+
+                    <div>
+
+                        <span>
+                            Consultation Date
+                        </span>
+
+                        <strong id="summaryDate">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="info-box">
+
+
+                    <i class="fa-solid fa-clock"></i>
+
+
+                    <div>
+
+                        <span>
+                            Consultation Time
+                        </span>
+
+                        <strong id="summaryTime">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DIAGNOSIS
+        ================================================== -->
+
+        <section class="summary-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        MEDICAL ASSESSMENT
+                    </span>
+
+
+                    <h3>
+                        Diagnosis
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon diagnosis-icon">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="diagnosis-box">
+
+
+                <div class="diagnosis-symbol">
+
+                    <i class="fa-solid fa-notes-medical"></i>
+
+                </div>
+
+
+                <p id="summaryDiagnosis">
+
+                    Consultation diagnosis will appear here.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEDICINES
+        ================================================== -->
+
+        <section class="summary-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        TREATMENT
+                    </span>
+
+
+                    <h3>
+                        Prescribed Medicines
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon medicine-icon">
+
+                    <i class="fa-solid fa-pills"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <ul
+                id="medicineList"
+                class="summary-list">
+
+
+                <li>
+                    Medicines recommended by the doctor will appear here.
+                </li>
+
+
+            </ul>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DOCTOR ADVICE
+        ================================================== -->
+
+        <section class="summary-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        DOCTOR GUIDANCE
+                    </span>
+
+
+                    <h3>
+                        Doctor's Advice
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon advice-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <ul
+                id="adviceList"
+                class="summary-list">
+
+
+                <li>
+                    Follow the doctor's recommendations carefully.
+                </li>
+
+
+            </ul>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOLLOW UP
+        ================================================== -->
+
+        <section class="summary-card">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+
+                    <span>
+                        NEXT VISIT
+                    </span>
+
+
+                    <h3>
+                        Follow-up Appointment
+                    </h3>
+
+
+                </div>
+
+
+                <div class="heading-icon followup-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="follow-up-box">
+
+
+                <div class="follow-up-icon">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                </div>
+
+
+                <div>
+
+
+                    <span>
+                        Recommended Follow-up
+                    </span>
+
+
+                    <strong id="followUpDate">
+                        Not scheduled
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACTION BUTTONS
+        ================================================== -->
+
+        <section class="summary-actions">
+
+
+            <button
+                type="button"
+                id="downloadBtn"
+                class="primary-btn">
+
+
+                <i class="fa-solid fa-download"></i>
+
+                Download PDF
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="printBtn">
+
+
+                <i class="fa-solid fa-print"></i>
+
+                Print Summary
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="historyBtn">
+
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Health History
+
+
+            </button>
+
+
+
+            <button
+                type="button"
+                id="dashboardBtn">
+
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <span>
+            © 2026 HomeRemedyHub
+        </span>
+
+
+        <span>
+            Your Digital Healthcare Companion ❤️
+        </span>
+
+
+    </footer>
+
+
+</div>
+
+
+
+<script src="js/summary.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Home Remedies | HomeRemedyHub
+    </title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/remedies.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a
+                href="remedies.html"
+                class="active">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+                <p class="page-label">
+                    TRUSTED SELF-CARE
+                </p>
+
+                <h1>
+                    Home Remedies
+                </h1>
+
+                <p>
+                    Enter a symptom to check whether home care
+                    may be suitable.
+                </p>
+
+            </div>
+
+
+
+            <a
+                href="profile.html"
+                class="profile-top">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
+
+        <section class="intro-card">
+
+
+            <div class="intro-icon">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    TRUSTED HEALTH INFORMATION
+                </span>
+
+                <h2>
+                    Check before using home care
+                </h2>
+
+                <p>
+                    HomeRemedyHub first checks whether the entered
+                    symptom is suitable for home care. Trusted
+                    information is shown only for minor symptoms.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SEARCH
+        ====================================================== -->
+
+        <section class="search-card">
+
+
+            <div class="search-heading">
+
+                <span>
+                    ENTER YOUR SYMPTOM
+                </span>
+
+                <h2>
+                    What are you experiencing?
+                </h2>
+
+                <p>
+                    Example: cold, cough, headache, fever or chest pain.
+                </p>
+
+            </div>
+
+
+
+            <div class="search-row">
+
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="remedySearch"
+                        placeholder="Enter symptom...">
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="searchRemedyBtn"
+                    class="search-btn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Check
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="quick-list">
+
+
+                <button
+                    class="quick-btn"
+                    data-symptom="cold">
+
+                    Cold
+
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    data-symptom="cough">
+
+                    Cough
+
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    data-symptom="headache">
+
+                    Headache
+
+                </button>
+
+
+                <button
+                    class="quick-btn"
+                    data-symptom="fever">
+
+                    Fever
+
+                </button>
+
+
+                <button
+                    class="quick-btn danger-quick"
+                    data-symptom="chest pain">
+
+                    Chest Pain
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LOADING
+        ====================================================== -->
+
+        <section
+            id="remedyLoading"
+            class="loading-card">
+
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+
+            <h3>
+                Checking symptom...
+            </h3>
+
+
+            <p>
+                Reviewing care level and trusted information.
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOME RESULT
+        ====================================================== -->
+
+        <section
+            id="homeResult"
+            class="result-section">
+
+
+            <div class="result-status home-status">
+
+
+                <div class="status-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        HOME CARE
+                    </span>
+
+                    <h2>
+                        Home care may be suitable
+                    </h2>
+
+                    <p>
+                        This symptom is currently classified as a
+                        minor home-care case.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="trusted-result">
+
+
+                <div class="trusted-header">
+
+
+                    <div>
+
+                        <span>
+                            TRUSTED SOURCE
+                        </span>
+
+                        <h2 id="trustedTitle">
+                            Health Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="source-logo">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <p
+                    id="trustedSummary"
+                    class="trusted-summary">
+
+                    Trusted information will appear here.
+
+                </p>
+
+
+
+                <div class="source-grid">
+
+
+                    <div>
+
+                        <span>
+                            Source
+                        </span>
+
+                        <strong id="trustedSource">
+                            MedlinePlus.gov
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Organization
+                        </span>
+
+                        <strong id="trustedOrganization">
+                            National Library of Medicine
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <a
+                    id="medlineLink"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="source-link">
+
+                    Read Full Information
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MEDICAL
+        ====================================================== -->
+
+        <section
+            id="medicalResult"
+            class="result-section">
+
+
+            <div class="result-status medical-status">
+
+
+                <div class="status-icon">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        MEDICAL CARE
+                    </span>
+
+                    <h2>
+                        Medical consultation recommended
+                    </h2>
+
+                    <p>
+                        Home-remedy information is not being suggested
+                        for this symptom. Please consult a healthcare
+                        professional.
+                    </p>
+
+
+                    <button
+                        id="bookAppointmentBtn"
+                        class="appointment-btn">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        Book Appointment
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EMERGENCY
+        ====================================================== -->
+
+        <section
+            id="emergencyResult"
+            class="result-section">
+
+
+            <div class="result-status emergency-status">
+
+
+                <div class="status-icon">
+
+                    <i class="fa-solid fa-truck-medical"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        URGENT CARE
+                    </span>
+
+                    <h2>
+                        Seek immediate medical attention
+                    </h2>
+
+                    <p>
+                        This symptom may require urgent evaluation.
+                        Home remedies should not be relied on.
+                    </p>
+
+
+                    <div class="emergency-buttons">
+
+
+                        <button
+                            id="urgentAppointmentBtn"
+                            class="appointment-btn">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            Book Appointment Immediately
+
+                        </button>
+
+
+                        <button
+                            id="emergencyHelpBtn"
+                            class="emergency-btn">
+
+                            <i class="fa-solid fa-truck-medical"></i>
+
+                            Emergency Help
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             UNKNOWN
+        ====================================================== -->
+
+        <section
+            id="unknownResult"
+            class="result-section">
+
+
+            <div class="unknown-card">
+
+
+                <i class="fa-solid fa-circle-question"></i>
+
+
+                <h2>
+                    Symptom not recognized
+                </h2>
+
+
+                <p>
+                    We do not have enough information to safely
+                    recommend home care for this symptom.
+                </p>
+
+
+                <a href="symptom.html">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    Use Symptom Checker
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SAFETY
+        ====================================================== -->
+
+        <section class="safety-note">
+
+
+            <i class="fa-solid fa-circle-info"></i>
+
+
+            <div>
+
+                <strong>
+                    Important
+                </strong>
+
+                <p>
+                    This feature provides general self-care information
+                    only and does not replace medical diagnosis.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <footer>
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+            <span>
+                Trusted health information powered by MedlinePlus
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="js/remedies.js"></script>
+
+
+</body>
+
+</html>

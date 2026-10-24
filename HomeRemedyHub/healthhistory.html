@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Health History | HomeRemedyHub
+    </title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/healthhistory.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="healthhistory.html"
+                class="active">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    PERSONAL HEALTH RECORDS
+                </p>
+
+
+                <h1>
+                    Health History
+                </h1>
+
+
+                <p>
+                    Review your saved health assessments.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             SUMMARY
+        ====================================================== -->
+
+        <section class="history-summary-grid">
+
+
+            <!-- TOTAL RECORDS -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon icon-purple">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                </div>
+
+
+                <div class="summary-content">
+
+
+                    <span>
+                        TOTAL RECORDS
+                    </span>
+
+
+                    <strong id="totalRecords">
+                        0
+                    </strong>
+
+
+                    <small>
+                        Saved assessments
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- LATEST CONDITION -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon icon-blue">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                </div>
+
+
+                <div class="summary-content">
+
+
+                    <span>
+                        LATEST CONDITION
+                    </span>
+
+
+                    <strong
+                        id="latestCondition"
+                        class="summary-text">
+
+                        No Data
+
+                    </strong>
+
+
+                    <small>
+                        Most recent result
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- LATEST SEVERITY -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon icon-yellow">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+
+                <div class="summary-content">
+
+
+                    <span>
+                        LATEST SEVERITY
+                    </span>
+
+
+                    <strong
+                        id="latestSeverity"
+                        class="summary-text">
+
+                        No Data
+
+                    </strong>
+
+
+                    <small>
+                        Most recent level
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- LATEST SCORE -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon icon-green">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+
+                <div class="summary-content">
+
+
+                    <span>
+                        ASSESSMENT SCORE
+                    </span>
+
+
+                    <strong id="latestPercentage">
+                        0%
+                    </strong>
+
+
+                    <small>
+                        Latest assessment
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SEARCH + FILTER
+        ====================================================== -->
+
+        <section class="history-tools">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="historySearch"
+                    placeholder="Search symptoms, condition or severity...">
+
+
+            </div>
+
+
+
+            <!-- FILTER -->
+
+            <div class="filter-section">
+
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="low">
+
+                    Low
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="moderate">
+
+                    Moderate
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="high">
+
+                    High
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RECORD HEADING
+        ====================================================== -->
+
+        <div class="records-heading">
+
+
+            <div>
+
+
+                <span>
+                    SAVED ASSESSMENTS
+                </span>
+
+
+                <h2>
+                    Your Health Records
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="records-actions">
+
+
+                <p id="recordCount">
+                    0 records available
+                </p>
+
+
+                <button
+                    type="button"
+                    id="deleteAllHistoryBtn"
+                    class="delete-all-btn">
+
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Delete All
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             HEALTH HISTORY RECORDS
+        ====================================================== -->
+
+        <section
+            id="healthHistoryList"
+            class="history-list">
+
+
+            <!-- Records are inserted by JavaScript -->
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EMPTY STATE
+        ====================================================== -->
+
+        <div
+            id="historyEmptyState"
+            class="history-empty-state">
+
+
+            <div class="empty-icon">
+
+                <i class="fa-regular fa-file-lines"></i>
+
+            </div>
+
+
+            <h3>
+                No health records found
+            </h3>
+
+
+            <p>
+                Your saved assessments will appear here.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- JavaScript -->
+
+<script src="js/healthhistory.js"></script>
+
+
+</body>
+
+</html>

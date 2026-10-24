@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Doctors | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/doctor.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a
+                href="doctor.html"
+                class="active">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    HEALTHCARE
+                </p>
+
+
+                <h1>
+                    Find Your Doctor
+                </h1>
+
+
+                <p>
+                    Search specialists and choose the right doctor for your needs.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE ONLY -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             SEARCH + FILTER
+        ================================================== -->
+
+        <section class="doctor-tools">
+
+
+            <div class="search-box">
+
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="doctorSearch"
+                    placeholder="Search doctor, hospital or specialization...">
+
+
+            </div>
+
+
+
+            <div class="filter-section">
+
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="general">
+
+                    General
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="cardiology">
+
+                    Cardiology
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="neurology">
+
+                    Neurology
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="orthopedic">
+
+                    Orthopedic
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="dermatology">
+
+                    Dermatology
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <span>
+                    OUR SPECIALISTS
+                </span>
+
+
+                <h2>
+                    Available Doctors
+                </h2>
+
+
+                <p>
+                    View doctor details, start a consultation or book an appointment.
+                </p>
+
+            </div>
+
+
+            <p id="doctorCount">
+                5 doctors available
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             DOCTORS
+        ================================================== -->
+
+        <section class="doctor-grid">
+
+
+            <!-- =================================================
+                 DR. PRIYA
+            ================================================== -->
+
+            <article
+                class="doctor-card"
+                data-specialty="general">
+
+
+                <div class="doctor-image">
+
+
+                    <img
+                        src="images/doctor-priya.jpg"
+                        alt="Dr. Priya Sharma">
+
+
+                </div>
+
+
+
+                <div class="doctor-details">
+
+
+                    <div class="doctor-title">
+
+
+                        <div>
+
+                            <h3>
+                                Dr. Priya Sharma
+                            </h3>
+
+                            <p class="specialization">
+                                General Physician
+                            </p>
+
+                        </div>
+
+
+                        <div class="doctor-rating">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            4.8
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            Yashoda Hospitals
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Hyderabad
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-stats">
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                8 Years
+                            </strong>
+
+                            <span>
+                                Experience
+                            </span>
+
+                        </div>
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                ₹500
+                            </strong>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-actions">
+
+
+                        <button
+                            type="button"
+                            class="view-btn"
+
+                            onclick="viewDoctor(
+                                'Dr. Priya Sharma',
+                                'General Physician',
+                                'Yashoda Hospitals',
+                                '8 Years',
+                                '₹500'
+                            )">
+
+                            View Profile
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="consult-btn"
+
+                            onclick="consultDoctor(
+                                'Dr. Priya Sharma',
+                                'General Physician',
+                                'Yashoda Hospitals'
+                            )">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            Consult
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+
+                            onclick="bookDoctor(
+                                'Dr. Priya Sharma',
+                                'General Physician',
+                                'Yashoda Hospitals'
+                            )">
+
+                            Book Now
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DR. RAHUL
+            ================================================== -->
+
+            <article
+                class="doctor-card"
+                data-specialty="cardiology">
+
+
+                <div class="doctor-image">
+
+
+                    <img
+                        src="images/doctor-rahul.jpg"
+                        alt="Dr. Rahul Kumar">
+
+
+                </div>
+
+
+
+                <div class="doctor-details">
+
+
+                    <div class="doctor-title">
+
+
+                        <div>
+
+                            <h3>
+                                Dr. Rahul Kumar
+                            </h3>
+
+                            <p class="specialization">
+                                Cardiologist
+                            </p>
+
+                        </div>
+
+
+                        <div class="doctor-rating">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            4.9
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            Apollo Hospitals
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Hyderabad
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-stats">
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                12 Years
+                            </strong>
+
+                            <span>
+                                Experience
+                            </span>
+
+                        </div>
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                ₹800
+                            </strong>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-actions">
+
+
+                        <button
+                            type="button"
+                            class="view-btn"
+
+                            onclick="viewDoctor(
+                                'Dr. Rahul Kumar',
+                                'Cardiologist',
+                                'Apollo Hospitals',
+                                '12 Years',
+                                '₹800'
+                            )">
+
+                            View Profile
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="consult-btn"
+
+                            onclick="consultDoctor(
+                                'Dr. Rahul Kumar',
+                                'Cardiologist',
+                                'Apollo Hospitals'
+                            )">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            Consult
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+
+                            onclick="bookDoctor(
+                                'Dr. Rahul Kumar',
+                                'Cardiologist',
+                                'Apollo Hospitals'
+                            )">
+
+                            Book Now
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DR. ANIL
+            ================================================== -->
+
+            <article
+                class="doctor-card"
+                data-specialty="neurology">
+
+
+                <div class="doctor-image">
+
+
+                    <img
+                        src="images/doctor-anil.jpg"
+                        alt="Dr. Anil Reddy">
+
+
+                </div>
+
+
+
+                <div class="doctor-details">
+
+
+                    <div class="doctor-title">
+
+
+                        <div>
+
+                            <h3>
+                                Dr. Anil Reddy
+                            </h3>
+
+                            <p class="specialization">
+                                Neurologist
+                            </p>
+
+                        </div>
+
+
+                        <div class="doctor-rating">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            4.7
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            CARE Hospitals
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Hyderabad
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-stats">
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                10 Years
+                            </strong>
+
+                            <span>
+                                Experience
+                            </span>
+
+                        </div>
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                ₹750
+                            </strong>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-actions">
+
+
+                        <button
+                            type="button"
+                            class="view-btn"
+
+                            onclick="viewDoctor(
+                                'Dr. Anil Reddy',
+                                'Neurologist',
+                                'CARE Hospitals',
+                                '10 Years',
+                                '₹750'
+                            )">
+
+                            View Profile
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="consult-btn"
+
+                            onclick="consultDoctor(
+                                'Dr. Anil Reddy',
+                                'Neurologist',
+                                'CARE Hospitals'
+                            )">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            Consult
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+
+                            onclick="bookDoctor(
+                                'Dr. Anil Reddy',
+                                'Neurologist',
+                                'CARE Hospitals'
+                            )">
+
+                            Book Now
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DR. MEENA
+            ================================================== -->
+
+            <article
+                class="doctor-card"
+                data-specialty="orthopedic">
+
+
+                <div class="doctor-image">
+
+
+                    <img
+                        src="images/doctor-meena.jpg"
+                        alt="Dr. Meena Reddy">
+
+
+                </div>
+
+
+
+                <div class="doctor-details">
+
+
+                    <div class="doctor-title">
+
+
+                        <div>
+
+                            <h3>
+                                Dr. Meena Reddy
+                            </h3>
+
+                            <p class="specialization">
+                                Orthopedic Specialist
+                            </p>
+
+                        </div>
+
+
+                        <div class="doctor-rating">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            4.8
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            Apollo Hospitals
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Hyderabad
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-stats">
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                9 Years
+                            </strong>
+
+                            <span>
+                                Experience
+                            </span>
+
+                        </div>
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                ₹700
+                            </strong>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-actions">
+
+
+                        <button
+                            type="button"
+                            class="view-btn"
+
+                            onclick="viewDoctor(
+                                'Dr. Meena Reddy',
+                                'Orthopedic Specialist',
+                                'Apollo Hospitals',
+                                '9 Years',
+                                '₹700'
+                            )">
+
+                            View Profile
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="consult-btn"
+
+                            onclick="consultDoctor(
+                                'Dr. Meena Reddy',
+                                'Orthopedic Specialist',
+                                'Apollo Hospitals'
+                            )">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            Consult
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+
+                            onclick="bookDoctor(
+                                'Dr. Meena Reddy',
+                                'Orthopedic Specialist',
+                                'Apollo Hospitals'
+                            )">
+
+                            Book Now
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DR. ANJALI
+            ================================================== -->
+
+            <article
+                class="doctor-card"
+                data-specialty="dermatology">
+
+
+                <div class="doctor-image">
+
+
+                    <img
+                        src="images/doctor-anjali.jpg"
+                        alt="Dr. Anjali Verma">
+
+
+                </div>
+
+
+
+                <div class="doctor-details">
+
+
+                    <div class="doctor-title">
+
+
+                        <div>
+
+                            <h3>
+                                Dr. Anjali Verma
+                            </h3>
+
+                            <p class="specialization">
+                                Dermatologist
+                            </p>
+
+                        </div>
+
+
+                        <div class="doctor-rating">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            4.8
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-meta">
+
+
+                        <p>
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            Yashoda Hospitals
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Hyderabad
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-stats">
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                7 Years
+                            </strong>
+
+                            <span>
+                                Experience
+                            </span>
+
+                        </div>
+
+
+                        <div class="doctor-stat">
+
+                            <strong>
+                                ₹650
+                            </strong>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="doctor-actions">
+
+
+                        <button
+                            type="button"
+                            class="view-btn"
+
+                            onclick="viewDoctor(
+                                'Dr. Anjali Verma',
+                                'Dermatologist',
+                                'Yashoda Hospitals',
+                                '7 Years',
+                                '₹650'
+                            )">
+
+                            View Profile
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="consult-btn"
+
+                            onclick="consultDoctor(
+                                'Dr. Anjali Verma',
+                                'Dermatologist',
+                                'Yashoda Hospitals'
+                            )">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            Consult
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="book-btn"
+
+                            onclick="bookDoctor(
+                                'Dr. Anjali Verma',
+                                'Dermatologist',
+                                'Yashoda Hospitals'
+                            )">
+
+                            Book Now
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NO RESULTS
+        ================================================== -->
+
+        <div
+            id="noDoctors"
+            class="no-doctors">
+
+
+            <div>
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+            </div>
+
+
+            <h3>
+                No doctors found
+            </h3>
+
+
+            <p>
+                Try another doctor name or specialty.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/doctor.js"></script>
+
+
+</body>
+
+</html>

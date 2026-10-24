@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         LEFT SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-menu">
+
+
+            <a
+                href="dashboard.html"
+                class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    HEALTH OVERVIEW
+                </p>
+
+
+                <h1>
+                    Dashboard
+                </h1>
+
+
+                <p>
+                    Your personal healthcare overview.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE ONLY -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="My Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             WELCOME
+        ================================================== -->
+
+        <section class="welcome-card">
+
+
+            <div class="welcome-content">
+
+
+                <span class="welcome-tag">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    YOUR HEALTH DASHBOARD
+
+                </span>
+
+
+
+                <h2>
+
+                    Welcome back,
+
+                    <span id="welcomeName">
+                        User
+                    </span>!
+
+                </h2>
+
+
+
+                <p>
+
+                    Review your recent health activity,
+                    assessments and appointments.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="welcome-art">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================== -->
+
+        <section class="summary-grid">
+
+
+            <!-- SYMPTOMS -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon symptom-icon">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                </div>
+
+
+                <div class="summary-info">
+
+
+                    <span>
+                        Symptoms Checked
+                    </span>
+
+
+                    <strong id="symptomCount">
+                        0
+                    </strong>
+
+
+                    <small>
+                        Total analyses
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- APPOINTMENTS -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon appointment-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+                <div class="summary-info">
+
+
+                    <span>
+                        Appointments
+                    </span>
+
+
+                    <strong id="appointmentCount">
+                        0
+                    </strong>
+
+
+                    <small>
+                        Total records
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- HEALTH STATUS -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon health-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+
+                <div class="summary-info">
+
+
+                    <span>
+                        Health Status
+                    </span>
+
+
+                    <strong
+                        id="healthStatus"
+                        class="status-neutral">
+
+                        No Data
+
+                    </strong>
+
+
+                    <small>
+                        Latest assessment
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- HEALTH RECORDS -->
+
+            <article class="summary-card">
+
+
+                <div class="summary-icon record-icon">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                </div>
+
+
+                <div class="summary-info">
+
+
+                    <span>
+                        Health Records
+                    </span>
+
+
+                    <strong id="healthRecordCount">
+                        0
+                    </strong>
+
+
+                    <small>
+                        Recorded analyses
+                    </small>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =================================================
+                 RECENT ACTIVITY
+            ================================================== -->
+
+            <article class="dashboard-card">
+
+
+                <div class="card-heading">
+
+
+                    <div>
+
+                        <span>
+                            RECENT UPDATES
+                        </span>
+
+                        <h3>
+                            Health Activity
+                        </h3>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+
+                </div>
+
+
+
+                <div
+                    id="recentActivity"
+                    class="activity-list">
+
+
+                    <div class="loading-state">
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        <p>
+                            Loading recent activity...
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LATEST APPOINTMENT
+            ================================================== -->
+
+            <article class="dashboard-card">
+
+
+                <div class="card-heading">
+
+
+                    <div>
+
+                        <span>
+                            APPOINTMENT
+                        </span>
+
+                        <h3>
+                            Latest Appointment
+                        </h3>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+
+                </div>
+
+
+
+                <div
+                    id="latestAppointment"
+                    class="latest-appointment">
+
+
+                    <div class="appointment-empty">
+
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+
+                        <strong>
+                            Loading appointment...
+                        </strong>
+
+
+                        <p>
+                            Please wait a moment.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SIMPLE HEALTH TIP
+        ================================================== -->
+
+        <section class="health-tip">
+
+
+            <div class="health-tip-icon">
+
+                <i class="fa-solid fa-leaf"></i>
+
+            </div>
+
+
+            <div>
+
+
+                <span>
+                    HEALTH TIP
+                </span>
+
+
+                <strong>
+                    Stay hydrated
+                </strong>
+
+
+                <p>
+
+                    Drink enough water throughout the day
+                    and maintain a healthy daily routine.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile | HomeRemedyHub</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- Edit Profile CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/edit-profile.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    HomeRemedyHub
+                </h2>
+
+                <span>
+                    Healthcare Companion
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="symptom.html">
+
+                <i class="fa-solid fa-stethoscope"></i>
+
+                <span>
+                    Symptom Checker
+                </span>
+
+            </a>
+
+
+            <a href="remedies.html">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <span>
+                    Home Remedies
+                </span>
+
+            </a>
+
+
+            <a href="doctor.html">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <span>
+                    Doctors
+                </span>
+
+            </a>
+
+
+            <a href="hospital.html">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <span>
+                    Hospitals
+                </span>
+
+            </a>
+
+
+            <a href="appointment.html">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a href="healthhistory.html">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    Health History
+                </span>
+
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="emergency-link">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+                <span>
+                    Emergency
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+
+                <p class="page-label">
+                    PROFILE MANAGEMENT
+                </p>
+
+
+                <h1>
+                    Edit Profile
+                </h1>
+
+
+                <p>
+                    Update your personal and basic health information.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <a
+                href="profile.html"
+                class="profile-top"
+                title="Back to Profile">
+
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Profile"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    ">
+
+
+                <span class="profile-fallback">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             EDIT PROFILE FORM
+        ================================================== -->
+
+        <section class="edit-card">
+
+
+            <!-- CARD HEADER -->
+
+            <div class="card-heading">
+
+
+                <div>
+
+
+                    <span>
+                        ACCOUNT DETAILS
+                    </span>
+
+
+                    <h2>
+                        Personal & Health Information
+                    </h2>
+
+
+                    <p>
+                        Keep your basic information accurate and up to date.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="heading-icon">
+
+                    <i class="fa-solid fa-user-pen"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form id="editProfileForm">
+
+
+                <!-- HIDDEN USER ID -->
+
+                <input
+                    type="hidden"
+                    id="userId">
+
+
+
+                <!-- =================================================
+                     PERSONAL DETAILS
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="form-section-title">
+
+
+                        <div class="section-title-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <span>
+                                PERSONAL DETAILS
+                            </span>
+
+
+                            <h3>
+                                Basic Information
+                            </h3>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="form-grid">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+
+                            <label for="fullName">
+
+                                Full Name
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-user"></i>
+
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    placeholder="Enter your full name"
+                                    required>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+
+                            <label for="email">
+
+                                Email Address
+
+                            </label>
+
+
+                            <div class="field-box readonly-field">
+
+
+                                <i class="fa-solid fa-envelope"></i>
+
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Enter email"
+                                    readonly>
+
+
+                            </div>
+
+
+                            <small>
+                                Email is used to identify your account.
+                            </small>
+
+
+                        </div>
+
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+
+                            <label for="phone">
+
+                                Phone Number
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-phone"></i>
+
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    maxlength="10"
+                                    inputmode="numeric"
+                                    placeholder="Enter 10-digit mobile number">
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- LOCATION -->
+
+                        <div class="form-group">
+
+
+                            <label for="location">
+
+                                Location
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+
+                                <input
+                                    type="text"
+                                    id="location"
+                                    placeholder="Example: Hyderabad">
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- GENDER -->
+
+                        <div class="form-group">
+
+
+                            <label for="gender">
+
+                                Gender
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-venus-mars"></i>
+
+
+                                <select id="gender">
+
+
+                                    <option value="">
+                                        Select gender
+                                    </option>
+
+
+                                    <option value="Male">
+                                        Male
+                                    </option>
+
+
+                                    <option value="Female">
+                                        Female
+                                    </option>
+
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+
+                                    <option value="Prefer not to say">
+                                        Prefer not to say
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- DOB -->
+
+                        <div class="form-group">
+
+
+                            <label for="dateOfBirth">
+
+                                Date of Birth
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-cake-candles"></i>
+
+
+                                <input
+                                    type="date"
+                                    id="dateOfBirth">
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     DIVIDER
+                ================================================== -->
+
+                <div class="section-divider"></div>
+
+
+
+                <!-- =================================================
+                     HEALTH DETAILS
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="form-section-title health-title">
+
+
+                        <div class="section-title-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <span>
+                                HEALTH DETAILS
+                            </span>
+
+
+                            <h3>
+                                Basic Health Information
+                            </h3>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="form-grid">
+
+
+                        <!-- BLOOD GROUP -->
+
+                        <div class="form-group">
+
+
+                            <label for="bloodGroup">
+
+                                Blood Group
+
+                            </label>
+
+
+                            <div class="field-box">
+
+
+                                <i class="fa-solid fa-droplet"></i>
+
+
+                                <select id="bloodGroup">
+
+
+                                    <option value="">
+                                        Select blood group
+                                    </option>
+
+
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- HEIGHT -->
+
+                        <div class="form-group">
+
+
+                            <label for="height">
+
+                                Height
+
+                            </label>
+
+
+                            <div class="field-box input-unit">
+
+
+                                <i class="fa-solid fa-ruler-vertical"></i>
+
+
+                                <input
+                                    type="number"
+                                    id="height"
+                                    min="50"
+                                    max="250"
+                                    step="0.1"
+                                    placeholder="Example: 165">
+
+
+                                <span>
+                                    cm
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- WEIGHT -->
+
+                        <div class="form-group">
+
+
+                            <label for="weight">
+
+                                Weight
+
+                            </label>
+
+
+                            <div class="field-box input-unit">
+
+
+                                <i class="fa-solid fa-weight-scale"></i>
+
+
+                                <input
+                                    type="number"
+                                    id="weight"
+                                    min="10"
+                                    max="400"
+                                    step="0.1"
+                                    placeholder="Example: 60">
+
+
+                                <span>
+                                    kg
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ROLE -->
+
+                        <div class="form-group">
+
+
+                            <label for="role">
+
+                                Account Role
+
+                            </label>
+
+
+                            <div class="field-box readonly-field">
+
+
+                                <i class="fa-solid fa-user-shield"></i>
+
+
+                                <input
+                                    type="text"
+                                    id="role"
+                                    value="Patient"
+                                    readonly>
+
+
+                            </div>
+
+
+                            <small>
+                                Account role cannot be changed here.
+                            </small>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     MESSAGE
+                ================================================== -->
+
+                <div
+                    id="editProfileMessage"
+                    class="edit-message hidden">
+                </div>
+
+
+
+                <!-- =================================================
+                     ACTION BUTTONS
+                ================================================== -->
+
+                <div class="form-actions">
+
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        onclick="window.location.href='profile.html'">
+
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                        Cancel
+
+
+                    </button>
+
+
+
+                    <button
+                        type="submit"
+                        id="saveProfileBtn"
+                        class="save-btn">
+
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Changes
+
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+
+            <span>
+                © 2026 HomeRemedyHub
+            </span>
+
+
+            <span>
+                Your Digital Healthcare Companion ❤️
+            </span>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/edit-profile.js"></script>
+
+
+</body>
+
+</html>
